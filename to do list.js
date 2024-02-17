@@ -15,6 +15,12 @@ function addtask(){
     inputBox.value = '';
     savedata();
 }
+inputBox.addEventListener("keyup", function(event) {
+    // 13 is the key code for Enter key
+    if (event.keyCode === 13) {
+        addtask();
+    }
+});
 listContainer.addEventListener("click",function(e){
     if(e.target.tagName==="LI"){
         e.target.classList.toggle("checked");
