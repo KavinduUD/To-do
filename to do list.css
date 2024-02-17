@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Arial';
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh; 
+    background: linear-gradient(170deg,rgb(80, 118, 90),rgb(51, 176, 201));
+    padding: 10px;
+}
+.todoapp{
+    width: 100%;
+    background-color: white;
+    max-width: 540px;
+    margin: 100px auto  20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todoapp h1{
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todoapp h1 img{
+    width: 60px;
+    margin-left: 30px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(236, 236, 231);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.row input{
+    flex:1;
+    outline: none;
+    border: none;
+    margin: none;
+    background: transparent;
+    padding :16px 5px;
+    font-weight: 14px;
+    font-size: 15px;
+}
+.row:hover{
+    background-color: rgb(247, 232, 246);
+}
+.row button{
+    outline: none;
+    cursor:pointer;
+    border: none;
+    padding :16px 50px;
+    background: brown;
+    color: rgb(205, 205, 239);
+    font-size: 16px;
+    border-radius: 40px;
+}
+.row button:hover{
+    background: black;
+}
+ul li{
+    list-style: none;
+    font-size: 15px;
+    padding: 12px 8px 10px 51px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    }
+ul li::before{
+    content:"";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left:12px;
+    top:6px;
+}
+ul li:hover{
+  background-color: rgb(252, 234, 213);  
+}
+ul li.checked{
+    color:black;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 3px;
+    top: 5px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+    color: rgb(196, 155, 20);
+    height: 40px;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: rgb(178, 224, 169);
+    color: rgb(161, 5, 5);
+}
+.clearclass button{
+    background: rgb(58, 47, 47);
+    outline: none;
+    cursor:pointer;
+    border: none;
+    padding :16px 50px;
+    color: rgb(205, 205, 239);
+    font-size: 16px;
+    border-radius: 40px;
+}
+.clearclass button:hover{
+    background: rgb(92, 82, 82);
+}
